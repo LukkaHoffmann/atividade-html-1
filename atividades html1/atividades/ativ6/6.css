@@ -1,0 +1,42 @@
+
+    /* Flexbox para centralizar e permitir quebra */
+    .gallery-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    /* Grid para organizar as imagens */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      text-align: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* Media query para telas menores */
+    @media (max-width: 800px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 150px);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
